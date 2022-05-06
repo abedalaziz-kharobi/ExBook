@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExBook2.Views.PostTempletPage">
+    <ContentPage.Content>
+        <StackLayout >
+            <Frame
+	         Grid.Row="4"
+             Margin="10,40,10,10"
+	         Padding="60"
+	         BackgroundColor="#7fc5ff"
+	        CornerRadius="8"
+	         HasShadow="False">
+                <Editor  Text="{Binding text}" Placeholder="Enter text here" BackgroundColor="Wheat" TextColor="Black"   />
+            </Frame>
+            <Editor BackgroundColor="Transparent" TextColor="Black" />
+            <Button VerticalOptions="Center"
+                        Text="Post"
+             
+                        BorderWidth="2"
+                        BackgroundColor="#A790F9"
+                        
+                        HorizontalOptions="CenterAndExpand"   
+                        Margin="70" 
+                        TextColor="White"
+                        
+                        Command="{Binding AddtextCommand}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
