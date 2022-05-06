@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:ExBook2.ViewModels" x:DataType="viewmodels:SignUpViewModel"
+             x:Class="ExBook2.Views.SignUpPage">
+    <RefreshView>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="https://cdn.discordapp.com/attachments/937470369722408960/972139752495136779/IMG-20220506-WA0006.jpg" Margin="5,-40,5,0"/>
+                <Label Text="Sign Ub " TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
+                <Label x:Name="ErrorMessage" TextColor="Red" Text="{Binding ErrorMessage}" />
+                <Entry Placeholder="Name" x:Name="TextName" Text="{Binding TextName}" Style="{StaticResource entrystyle}"/>
+                <Entry Placeholder="Email" Text="{Binding Email}" Style="{StaticResource entrystyle}" x:Name="Email"/>
+                <Entry Placeholder="Pasword" IsPassword="True" Text="{Binding Pasword}" Style="{StaticResource entrystyle}" x:Name="Password"/>
+                <Entry Placeholder="RePasword" IsPassword="True" Text="{Binding rePasword}" Style="{StaticResource entrystyle}" x:Name="rePassword"/>
+                <Button Text="Sign Up" Style="{StaticResource buttonStyle}" x:Name="Sign_Up" Command="{Binding SignUpCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+</ContentPage>

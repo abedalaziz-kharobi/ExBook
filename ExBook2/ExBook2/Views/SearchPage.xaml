@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExBook2.Views.SearchPage">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Padding="10,0,10,0">
+                <SearchBar TextChanged="SearchBar_TextChanged"></SearchBar>
+                <ListView ItemsSource="{Binding MyListCollector}" IsPullToRefreshEnabled="True" x:Name="BookListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50"/>
+                                    <StackLayout HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding MyNameBook}"
+                                               FontAttributes="Bold"/>
+                                        <Label Text="{Binding MyDetailBook}"
+                                               TextColor="Gray"/>
+
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
