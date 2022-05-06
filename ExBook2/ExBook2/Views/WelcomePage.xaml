@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExBook2.Views.WelcomePage">
+    <ContentPage.Content>
+        <RefreshView>
+            <ScrollView>
+                <StackLayout  Background="white">
+                    <Image x:Name="myImage" Source="https://cdn.discordapp.com/attachments/937470369722408960/972139752495136779/IMG-20220506-WA0006.jpg"  HeightRequest="250" Margin="40,5,10,20"/>
+
+                    <StackLayout>
+                        <Label Text="بالعلم نبني بيوتاً لا عماد لها  " TextColor="Black" HorizontalOptions="EndAndExpand"
+                       FontSize="Large" Padding="5" />
+                        <Label Text="وبالجهل نهدم بيوت العز والكرم  " TextColor="Black" HorizontalOptions="StartAndExpand" FontSize="Large"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:ExBook2.Views"
+       Title="ExBook2"
+       x:Class="ExBook2.AppShell"
+       NavigationPage.HasNavigationBar="False">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="Black" />
+                <Setter Property="Shell.DisabledColor" Value="#353534 " />
+                <Setter Property="Shell.UnselectedColor" Value="#353534 " />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="Black"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#353534 "/>
+                <Setter Property="Shell.TabBarTitleColor" Value="Black"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+    <TabBar>
+        <ShellContent Icon="https://cdn-icons-png.flaticon.com/512/25/25694.png" Title="Home Page"  ContentTemplate="{DataTemplate local:HomePage}" />
+        <ShellContent Icon="https://cdn1.iconfinder.com/data/icons/product-ui-1/32/edit_post_add_edit_pen_adjust-256.png" Title="Post Page"  ContentTemplate="{DataTemplate local:PostPage}" />
+        <ShellContent Icon="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_search_48px-256.png" Title="Search"  ContentTemplate="{DataTemplate local:SearchPage}" />
+        <ShellContent Icon="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/40/9.15-256.png" Title="Moor Page"  ContentTemplate="{DataTemplate local:MoorPage}" />
+    </TabBar>
+</Shell>

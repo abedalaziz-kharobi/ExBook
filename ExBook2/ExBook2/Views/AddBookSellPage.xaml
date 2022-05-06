@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:ExBook2.ViewModels" x:DataType="viewmodels:AddBookSellViewModel"
+             x:Class="ExBook2.Views.AddBookSellPage">
+    <ScrollView>
+        <StackLayout  >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                <Button Text="بيع"  Margin="0,20,0,0" BackgroundColor="#A790F9"/>
+                <Button Text="تبديل" Margin="0,20,0,0" BackgroundColor="#A790F9" Clicked="ToExchangePage" />
+            </StackLayout>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal"  >
+
+                    <Entry Text="{Binding AuthorName }" x:Name="AuthorName"     HorizontalOptions="CenterAndExpand" Placeholder="اسم الكاتب "  Margin="0,0,30,0"  PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry  Text ="{Binding BookName}" x:Name="BookName" Placeholder="اسم الكتاب"  PlaceholderColor="Gray" Margin="0,0,30,0" TextColor="Black"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"   >
+                    <Entry  Text="{Binding EditionNumber}"  x:Name="EditionNumber"  HorizontalOptions="CenterAndExpand"  
+                            Placeholder="الطبعة"  PlaceholderColor="Gray" Keyboard="Numeric" 
+                            Margin="80,0,0,0" />
+                    <Entry  Text ="{Binding Salary}" x:Name="Salary"  HorizontalOptions="EndAndExpand" 
+                        Placeholder="السعر المقترح" Keyboard="Numeric" PlaceholderColor="Gray" 
+                        Margin="0,0,20,0" />
+
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <Entry  Text ="{Binding MyCollage}" x:Name="SecondMyCollage" Placeholder="الكلية"  PlaceholderColor="Gray" 
+                                Margin="0,0,30,0" TextColor="Black"/>
+
+            </StackLayout>
+
+            <Frame Margin="30,40,30,10" Padding="60" BackgroundColor="#A790F9"
+                       CornerRadius="8" HasShadow="False" >
+                <Editor Placeholder="Enter text here" BackgroundColor="Transparent" TextColor="Black"
+                            Text ="{Binding Description}" />
+            </Frame>
+            <Image x:Name="ImgFile" WidthRequest="200" HeightRequest="200"/>
+            <Button Text="رفع الصوره" Clicked="UploadImage" BackgroundColor="#A790F9"
+                    Margin="30,0,30,0"/>
+
+            <StackLayout>
+                <Button Command ="{Binding AddSellBookCommand}" HorizontalOptions="Start" Text="طلب"  
+                        VerticalOptions="Center" Margin="30" BackgroundColor="#A790F9" />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

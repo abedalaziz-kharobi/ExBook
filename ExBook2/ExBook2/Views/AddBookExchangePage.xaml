@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:ExBook2.ViewModels" x:DataType="viewmodels:AddBookExchangeViewModel"
+             x:Class="ExBook2.Views.AddBookExchangePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout  >
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                    <Button Text="بيع"  Margin="0,10,0,0" BackgroundColor="#A790F9" Clicked="ToSellPage"/>
+                    <Button Text="تبديل" Margin="0,10,0,0" BackgroundColor="#A790F9"  />
+                </StackLayout>
+                <StackLayout>
+                    <Label FontSize="Title" Margin="0,30,30,30">المستبدل</Label>
+
+                    <StackLayout Orientation="Horizontal"  >
+
+                        <Entry Text="{Binding FirstAuthorName }" x:Name="FirstutherName"     HorizontalOptions="CenterAndExpand" Placeholder="اسم الكاتب "  Margin="0,0,30,0"  PlaceholderColor="Gray" TextColor="Black" />
+                        <Entry  Text ="{Binding FirstBookName}" x:Name="FirstBookName" Placeholder="اسم الكتاب"  PlaceholderColor="Gray" Margin="0,0,30,0" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"   >
+                        <Entry  Text="{Binding FirstEditionNumber}"  x:Name="FirstEditionNumber"  HorizontalOptions="CenterAndExpand"  Placeholder="الطبعة"  
+                                PlaceholderColor="Gray" Keyboard="Numeric" Margin="0,0,30,0" />
+                        <Entry  Text ="{Binding FirstMyCollege}" x:Name="FirstMyCollage" Placeholder="الكلية"  PlaceholderColor="Gray" 
+                                Margin="0,0,30,0" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <Frame Margin="30,40,30,10" Padding="60" BackgroundColor="#A790F9"
+                    CornerRadius="8" HasShadow="False" >
+                    <Editor Text="{Binding FirstDescription}" Placeholder="Enter text here" BackgroundColor="Transparent" TextColor="Black" />
+                </Frame>
+                <Image x:Name="FirstImgFile" WidthRequest="200" HeightRequest="200"/>
+                <Button Text="رفع الصوره"  Margin="30,0,30,0" BackgroundColor="#A790F9" Clicked="FirstUploadImage"/>
+
+                <StackLayout>
+                    <Label FontSize="Title" Margin="0,30,30,30">المستبدل به</Label>
+
+                    <StackLayout Orientation="Horizontal"  >
+
+                        <Entry Text="{Binding SecondAuthorName }" x:Name="SecondAutherName"     HorizontalOptions="CenterAndExpand" Placeholder="اسم الكاتب "  Margin="0,0,30,0"  PlaceholderColor="Gray" TextColor="Black" />
+                        <Entry  Text ="{Binding SecondBookName}" x:Name="SecondBookName" Placeholder="اسم الكتاب"  PlaceholderColor="Gray" Margin="0,0,30,0" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"   >
+                        <Entry  Text="{Binding SecondEditionNumber}"  x:Name="SecondEditionNumber"  HorizontalOptions="CenterAndExpand"  
+                                Placeholder="الطبعة"  PlaceholderColor="Gray" Keyboard="Numeric" Margin="0,0,30,0" />
+                        <Entry  Text ="{Binding SecondMyCollege}" x:Name="SecondMyCollage" Placeholder="الكلية"  PlaceholderColor="Gray" 
+                                Margin="0,0,30,0" TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+                <Frame Margin="30,40,30,10" Padding="60" BackgroundColor="#A790F9"
+                       CornerRadius="8" HasShadow="False" >
+                    <Editor Text="{Binding SecondDescription}" Placeholder="Enter text here" BackgroundColor="Transparent" TextColor="Black"/>
+                </Frame>
+
+
+
+                <Image x:Name="SecondImgFile" WidthRequest="200" HeightRequest="200"/>
+                <Button Text="رفع الصوره"  Margin="30,0,30,0" BackgroundColor="#A790F9" Clicked="SecondUploadImage"/>
+
+                <StackLayout>
+                    <Button  HorizontalOptions="Start" Text="طلب"  VerticalOptions="Center" Margin="50" BackgroundColor="#A790F9" Command ="{Binding AddExchangeBookCommand}" />
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
