@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:ExBook2.ViewModels" x:DataType="viewmodels:LogInVeiwModel"
+             x:Class="ExBook2.Views.MoorPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="ContentLayout" Value="Right,10"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Title"/>
+                <Setter Property="BackgroundColor" Value="#f1bf8c"/>
+                <Setter Property="Margin" Value="15, 5 , 15 , 5"/>
+                <Setter Property="Padding" Value="15 , 5, 15 ,5"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <RefreshView>
+        <ScrollView>
+            <StackLayout>
+                <Button Text="حسابي" x:Name="profile" Clicked="Profile_Clicked" Style="{StaticResource buttonStyle}"/>
+                <Button Text="المفضلة" x:Name="Favorite" Clicked="Favorite_Clicked" Style="{StaticResource buttonStyle}"/>
+                <Button Text= "تواصل معنا" x:Name="Connect_us" Clicked="Connect_us_Clicked" Style="{StaticResource buttonStyle}"/>
+                <Button Text="المحادثة" x:Name="Messages" Clicked="Messages_Clicked" Style="{StaticResource buttonStyle}"/>
+                <Button Text="اضافة كتاب" x:Name="lift_book" Clicked="lift_book_Clicked" Style="{StaticResource buttonStyle}"/>
+                <Button Text="تسجيل الخروج" x:Name="log_out" Clicked="log_out_Clicked" Style="{StaticResource buttonStyle}"/>
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+</ContentPage>
