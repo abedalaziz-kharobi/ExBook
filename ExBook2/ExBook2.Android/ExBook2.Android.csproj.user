@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>Samsung SM-A525F</SelectedDevice>
-    <ActiveDebugProfile>Samsung SM-A525F</ActiveDebugProfile>
+    <SelectedDevice>pixel_5_-_api_30</SelectedDevice>
+    <ActiveDebugProfile>pixel_5_-_api_30</ActiveDebugProfile>
     <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
-    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
+    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
     <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

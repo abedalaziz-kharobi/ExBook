@@ -4,9 +4,7 @@
              x:Class="ExBook2.Views.HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Pull request"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
